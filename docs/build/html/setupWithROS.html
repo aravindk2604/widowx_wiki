@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Setup With ROS &mdash; WidowX 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/hacks.css" type="text/css" />
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="about.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="WidowX 0.0.1 documentation" href="index.html"/>
+        <link rel="next" title="License" href="license.html"/>
+        <link rel="prev" title="About" href="about.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> WidowX
+          
+
+          
+            
+            <img src="_static/logo_widowx.jpeg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup With ROS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ros-control-of-the-arm-independent-of-the-sr300-sensor">ROS control of the arm independent of the SR300 Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-control-of-the-arm-with-the-sr300-sensor">ROS control of the arm with the SR300 Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arranging-your-sr300">Arranging your SR300</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#where-can-i-get-more-information-about-the-turtlebot3">1. Where can I get more information about the TurtleBot3?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#where-can-i-order-the-widowx-arm-from">2. Where can I order the WidowX ARM from?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-changed-in-the-documentation-recently">3. What changed in the documentation recently?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog - [development]</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WidowX</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Setup With ROS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/setupWithROS.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setup-with-ros">
+<span id="chapter-setupwithros"></span><h1>Setup With ROS<a class="headerlink" href="#setup-with-ros" title="Permalink to this headline">¶</a></h1>
+<p>The documentation assumes that <code class="docutils literal"><span class="pre">ROS</span> <span class="pre">Kinetic</span></code> is already installed on the host pc.</p>
+<div class="section" id="ros-control-of-the-arm-independent-of-the-sr300-sensor">
+<h2>ROS control of the arm independent of the SR300 Sensor<a class="headerlink" href="#ros-control-of-the-arm-independent-of-the-sr300-sensor" title="Permalink to this headline">¶</a></h2>
+<p>Open up a terminal window and enter the following commands.</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="n">cd</span> <span class="o">~/</span><span class="n">widowx_arm</span>
+<span class="n">source</span> <span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">roslaunch</span> <span class="n">widowx_arm_bringup</span> <span class="n">arm_moveit</span><span class="o">.</span><span class="n">launch</span> <span class="n">sim</span><span class="p">:</span><span class="o">=</span><span class="n">false</span> <span class="n">sr300</span><span class="p">:</span><span class="o">=</span><span class="n">false</span>
+</pre></div>
+</div>
+<p>This should load RVIZ with the proper WidowX arm bringup. You can move the arm using the visual representation on screen, choosing one of the many “Planning Library” under the Context tab and then hitting “Plan and Execute” under the Planning Tab. There are also several presets you can choose from. Once you’re done, you can close the program by returning to your terminal window and pressing CTRL + C.</p>
+</div>
+<div class="section" id="ros-control-of-the-arm-with-the-sr300-sensor">
+<h2>ROS control of the arm with the SR300 Sensor<a class="headerlink" href="#ros-control-of-the-arm-with-the-sr300-sensor" title="Permalink to this headline">¶</a></h2>
+<p>Open up a terminal window and enter the following commands</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="n">cd</span> <span class="o">~/</span><span class="n">widowx_arm</span>
+<span class="n">source</span> <span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">roslaunch</span> <span class="n">widowx_arm_bringup</span> <span class="n">arm_moveit</span><span class="o">.</span><span class="n">launch</span> <span class="n">sim</span><span class="p">:</span><span class="o">=</span><span class="n">false</span> <span class="n">sr300</span><span class="p">:</span><span class="o">=</span><span class="n">true</span>
+</pre></div>
+</div>
+<p>This should load RVIZ with the proper WidowX arm bringup, as well as load in the drivers for the SR300. You should see a 3D point map representation of your workspace on the right. You can still move the arm using the visual representation on screen, and hitting “Plan and Execute” under the Planning Tab. We need to move the arm so that we can adjust the camera angle and position.</p>
+</div>
+<div class="section" id="arranging-your-sr300">
+<h2>Arranging your SR300<a class="headerlink" href="#arranging-your-sr300" title="Permalink to this headline">¶</a></h2>
+<p>Select the pulled_back_pose from the goal state. Press Update, then press Plan and Execute. Your arm should move back to a pulled back state, allowing the camera to see the base of the WidowX.
+Change your view to a side view of the arm and camera representation. Move the SR300’s angle so that the representation of the workspace is level to the base of the WidowX on-screen.
+Change your view to an overhead view of the workspace. Move the Camera Stand so that the outline of the base of the WidowX matches to the cutout of the WidowX base on the SR300.</p>
+<p>Open a second Terminal window. This will be a control window, so keep it visible when possible</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="n">cd</span> <span class="o">~/</span><span class="n">widowx_arm</span>
+<span class="n">source</span> <span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">roslaunch</span> <span class="n">widowx_block_manipulation</span> <span class="n">block_sorting_demo</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+<p>This demo will allow us to do some new things that utilize the SR300’s object detection abilities! Place blocks of different colors in the workspace (default are red and green), and in the terminal, type <code class="docutils literal"><span class="pre">d</span></code> and hit <code class="docutils literal"><span class="pre">Enter</span></code>. Where the blocks were, there should be gray cubes shown on screen. At this point, you can either automatically sort all blocks detected by typing <code class="docutils literal"><span class="pre">m</span></code> in the terminal and hitting <code class="docutils literal"><span class="pre">Enter</span></code> or you can use the 3D representation of the object in RVIZ to pick and place the block wherever you like on the x and y axis.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="about.html" class="btn btn-neutral" title="About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Dabit Industries.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
