@@ -173,7 +173,7 @@
             
   <div class="section" id="setup-with-ros">
 <span id="chapter-setupwithros"></span><h1>Setup With ROS<a class="headerlink" href="#setup-with-ros" title="Permalink to this headline">¶</a></h1>
-<p>The documentation assumes that <code class="docutils literal"><span class="pre">ROS</span> <span class="pre">Kinetic</span></code> is already installed on the host pc.</p>
+<p>The documentation assumes that <code class="docutils literal"><span class="pre">ROS</span> <span class="pre">Kinetic</span></code> is already installed on the host pc. If not, then you may visit <a class="reference external" href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic setup</a>.</p>
 <div class="section" id="ros-control-of-the-arm-independent-of-the-sr300-sensor">
 <h2>ROS control of the arm independent of the SR300 Sensor<a class="headerlink" href="#ros-control-of-the-arm-independent-of-the-sr300-sensor" title="Permalink to this headline">¶</a></h2>
 <p>Open up a terminal window and enter the following commands.</p>
@@ -182,7 +182,9 @@
 <span class="n">roslaunch</span> <span class="n">widowx_arm_bringup</span> <span class="n">arm_moveit</span><span class="o">.</span><span class="n">launch</span> <span class="n">sim</span><span class="p">:</span><span class="o">=</span><span class="n">false</span> <span class="n">sr300</span><span class="p">:</span><span class="o">=</span><span class="n">false</span>
 </pre></div>
 </div>
+<img alt="_images/commands.png" src="_images/commands.png" />
 <p>This should load RVIZ with the proper WidowX arm bringup. You can move the arm using the visual representation on screen, choosing one of the many “Planning Library” under the Context tab and then hitting “Plan and Execute” under the Planning Tab. There are also several presets you can choose from. Once you’re done, you can close the program by returning to your terminal window and pressing CTRL + C.</p>
+<img alt="_images/rvizInitial.png" src="_images/rvizInitial.png" />
 </div>
 <div class="section" id="ros-control-of-the-arm-with-the-sr300-sensor">
 <h2>ROS control of the arm with the SR300 Sensor<a class="headerlink" href="#ros-control-of-the-arm-with-the-sr300-sensor" title="Permalink to this headline">¶</a></h2>
@@ -193,10 +195,12 @@
 </pre></div>
 </div>
 <p>This should load RVIZ with the proper WidowX arm bringup, as well as load in the drivers for the SR300. You should see a 3D point map representation of your workspace on the right. You can still move the arm using the visual representation on screen, and hitting “Plan and Execute” under the Planning Tab. We need to move the arm so that we can adjust the camera angle and position.</p>
+<img alt="_images/sr300True.png" src="_images/sr300True.png" />
 </div>
 <div class="section" id="arranging-your-sr300">
 <h2>Arranging your SR300<a class="headerlink" href="#arranging-your-sr300" title="Permalink to this headline">¶</a></h2>
-<p>Select the pulled_back_pose from the goal state. Press Update, then press Plan and Execute. Your arm should move back to a pulled back state, allowing the camera to see the base of the WidowX.
+<p>Keep the previous terminal open and change a few things in RVIZ. Under the Planning tab, in the Query options you will find the “Select Goal State” option.
+Select the pulled_back_pose from the goal state. Press Update, then press Plan and Execute. Your arm should move back to a pulled back state, allowing the camera to see the base of the WidowX.
 Change your view to a side view of the arm and camera representation. Move the SR300’s angle so that the representation of the workspace is level to the base of the WidowX on-screen.
 Change your view to an overhead view of the workspace. Move the Camera Stand so that the outline of the base of the WidowX matches to the cutout of the WidowX base on the SR300.</p>
 <p>Open a second Terminal window. This will be a control window, so keep it visible when possible</p>
@@ -205,7 +209,13 @@ Change your view to an overhead view of the workspace. Move the Camera Stand so 
 <span class="n">roslaunch</span> <span class="n">widowx_block_manipulation</span> <span class="n">block_sorting_demo</span><span class="o">.</span><span class="n">launch</span>
 </pre></div>
 </div>
-<p>This demo will allow us to do some new things that utilize the SR300’s object detection abilities! Place blocks of different colors in the workspace (default are red and green), and in the terminal, type <code class="docutils literal"><span class="pre">d</span></code> and hit <code class="docutils literal"><span class="pre">Enter</span></code>. Where the blocks were, there should be gray cubes shown on screen. At this point, you can either automatically sort all blocks detected by typing <code class="docutils literal"><span class="pre">m</span></code> in the terminal and hitting <code class="docutils literal"><span class="pre">Enter</span></code> or you can use the 3D representation of the object in RVIZ to pick and place the block wherever you like on the x and y axis.</p>
+<p>This demo will allow us to do some new things that utilize the SR300’s object detection abilities! Place blocks of different colors in the workspace (default are red and green), and in the terminal, type <code class="docutils literal"><span class="pre">d</span></code> for <strong>detection of the blocks</strong> and hit <code class="docutils literal"><span class="pre">Enter</span></code>. Where the blocks were, there should be gray cubes shown on screen. At this point, you can either automatically sort all blocks detected by typing <code class="docutils literal"><span class="pre">o</span></code> (organize) in the terminal and hitting <code class="docutils literal"><span class="pre">Enter</span></code> or you can use the 3D representation of the object in RVIZ to pick and place the block wherever you like on the x and y axis.</p>
+<p><strong>Options</strong></p>
+<img alt="_images/options.png" src="_images/options.png" />
+<p><strong>Detection of Blocks</strong></p>
+<img alt="_images/detection.png" src="_images/detection.png" />
+<p><strong>Organize/Sort the red and green blocks</strong></p>
+<img alt="_images/organize.png" src="_images/organize.png" />
 </div>
 </div>
 
