@@ -15,17 +15,17 @@ Use Cases
 
 **Identify and Sort**
 
-.. youtube:: UMtlmfByz-M
+.. youtube:: https://www.youtube.com/watch?v=UMtlmfByz-M
 
 
 **Motion Planning**
 
-.. youtube:: NTrmUOY083Y
+.. youtube:: https://www.youtube.com/watch?v=NTrmUOY083Y
 
 
 **Pick and Place**
 
-.. youtube:: dby--vF0li8
+.. youtube:: https://www.youtube.com/watch?v=dby--vF0li8
 
 
 Product features
