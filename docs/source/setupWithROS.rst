@@ -3,7 +3,88 @@
 Setup With ROS
 ==============
 
-The documentation assumes that ``ROS Kinetic`` is already installed on the host pc. If not, then you may visit `ROS Kinetic setup <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_.
+The documentation assumes that ``ROS Kinetic`` is already installed on the host pc (Ubuntu 16.04). If not, follow the instructions below.
+
+Install ROS Kinetic
+~~~~~~~~~~~~~~~~~~~
+
+`<http://wiki.ros.org/kinetic/Installation/Ubuntu>`_
+
+Open a terminal and type in the following
+::
+
+    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+    sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install ros-kinetic-desktop
+    sudo rosdep init
+    rosdep update
+    echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
+
+
+RealSense ROS Package Install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are a few prerequisites.
+::
+
+    wget -O enable_kernel_sources.sh http://bit.ly/en_krnl_src
+    bash ./enable_kernel_sources.sh
+
+
+**Sensor package**
+
+::
+
+    sudo apt install ros-kinetic-librealsense ros-kinetic-realsense-camera
+    sudo reboot
+
+**Kernel 4.10 installation work-around**
+::
+
+    sudo apt-get install libglfw3-dev
+    cd ~
+    git clone https://github.com/IntelRealSense/librealsense.git
+    cd librealsense
+    mkdir build && cd build
+    cmake ../
+    make && sudo make install
+    cd ..
+    sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/
+    sudo udevadm control --reload-rules && udevadm trigger
+    ./scripts/patch-realsense-ubuntu-xenial.sh
+
+Additional dependencies
+~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    sudo apt install git htop
+    sudo apt install ros-kinetic-moveit ros-kinetic-pcl-ros
+
+Setting dialout permission for Arbotix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Replace yourUserAccount with the system account you are using
+::
+
+    sudo usermod -a -G dialout yourUserAccount
+    sudo reboot
+
+Clone widowx_arm repository and build
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    mkdir -p ~/widowx_arm/src
+    cd ~/widowx_arm/src
+    git clone https://github.com/Interbotix/widowx_arm.git .
+    git clone https://github.com/Interbotix/arbotix_ros.git -b parallel_gripper
+    cd ~/widowx_arm
+    catkin_make
+
 
 ROS control of the arm independent of the SR300 Sensor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
