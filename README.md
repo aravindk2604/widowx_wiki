@@ -1,12 +1,15 @@
 # widowx_wiki
-readthedocs wiki for the Trossen Robotics' WidowX arm
+readthedocs wiki for the ![Trossen Robotics' WidowX](http://www.trossenrobotics.com/widowxrobotarm) arm
+
 
 # Quickstart
+Follow the instructions below after cloning this git repo.
 
 ### Clone github repo and install
 ```
-mkdir ~/widowx_arm
-cd ~/widowx_arm/
+cd ~/widowx_wiki
+mkdir widowx_arm
+cd widowx_arm/
 wstool init src .rosinstall
 catkin_make
 ```
