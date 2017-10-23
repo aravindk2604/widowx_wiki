@@ -1,5 +1,5 @@
 # widowx_wiki
-readthedocs wiki for the ![Trossen Robotics' WidowX](http://www.trossenrobotics.com/widowxrobotarm) arm
+readthedocs wiki for the [Trossen Robotics' WidowX](http://www.trossenrobotics.com/widowxrobotarm) arm
 
 
 # Quickstart
