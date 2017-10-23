@@ -1,0 +1,8 @@
+# main repo
+- git: {local-name: trossen_widowx, uri: 'git@github.com:Interbotix/widowx_arm.git', version:
+'master'}
+
+# additional dependencies
+- git: {local-name: arbotix_ros, uri:
+'git@github.com:Interbotix/arbotix_ros.git', version:
+'turtlebot2i'}
