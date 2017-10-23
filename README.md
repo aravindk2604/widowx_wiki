@@ -10,7 +10,7 @@ Follow the instructions below after cloning this git repo.
 cd ~/widowx_wiki
 mkdir widowx_arm
 cd widowx_arm/
-wstool init src .rosinstall
+wstool init src ~/widowx_wiki/widowx_arm/.rosinstall
 catkin_make
 ```
 
