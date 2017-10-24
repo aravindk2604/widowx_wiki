@@ -15,17 +15,23 @@ Use Cases
 
 **Identify and Sort**
 
-.. youtube:: http://www.youtube.com/watch?v=UMtlmfByz-M
+.. raw:: html
+
+  <iframe src="https://www.youtube.com/embed/UMtlmfByz-M" style="border: 0; height: 345px; width: 560px"></iframe>
 
 
 **Motion Planning**
 
-.. youtube:: http://www.youtube.com/watch?v=NTrmUOY083Y
+.. raw:: html
+
+  <iframe src="https://www.youtube.com/embed/NTrmUOY083Y" style="border: 0; height: 345px; width: 560px"></iframe>
 
 
 **Pick and Place**
 
-.. youtube:: http://www.youtube.com/watch?v=dby--vF0li8
+.. raw:: html
+
+  <iframe src="https://www.youtube.com/embed/dby--vF0li8" style="border: 0; height: 345px; width: 560px"></iframe>
 
 
 Product features
